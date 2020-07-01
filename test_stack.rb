@@ -15,6 +15,7 @@ class TestStack < Minitest::Test
 
   def test_push_and_top
     @stack.push(1)
+    refute(@stack.empty?)
     assert_equal(1, @stack.top)
   end
 
