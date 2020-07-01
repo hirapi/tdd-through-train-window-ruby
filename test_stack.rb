@@ -17,4 +17,9 @@ class TestStack < Minitest::Test
     @stack.push(1)
     assert_equal(1, @stack.top)
   end
+
+  def test_push_and_size
+    @stack.push(1)
+    assert_equal(1, @stack.size)
+  end
 end
