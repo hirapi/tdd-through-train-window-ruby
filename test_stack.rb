@@ -29,4 +29,10 @@ class TestStack < Minitest::Test
   def test_empty_pop
     assert_raises(Stack::EmptyStackException) { @stack.pop }
   end
+
+  def test_push_and_pop
+    @stack.push(1)
+    @stack.pop
+    assert_equal(1, @stack.size)
+  end
 end
