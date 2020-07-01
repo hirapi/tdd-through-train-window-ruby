@@ -5,6 +5,7 @@ class Stack
   class EmptyStackException < StandardError; end
 
   def initialize
+    @values = []
     @size = 0
   end
 
@@ -13,7 +14,7 @@ class Stack
   end
 
   def push(value)
-    @value = value
+    @values[@size] = value
     @size += 1
   end
 
@@ -26,7 +27,7 @@ class Stack
   def top
     ensure_not_empty
 
-    @value
+    @values[@size - 1]
   end
 
   def size
