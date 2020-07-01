@@ -12,4 +12,9 @@ class TestStack < Minitest::Test
   def test_create
     assert(@stack.empty?)
   end
+
+  def test_push_and_top
+    @stack.push(1)
+    assert_equal(1, @stack.top)
+  end
 end
