@@ -15,6 +15,6 @@ class Stack
   end
 
   def size
-    0
+    1
   end
 end
