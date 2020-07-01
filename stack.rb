@@ -18,7 +18,7 @@ class Stack
   end
 
   def pop
-    raise EmptyStackException
+    raise EmptyStackException if empty?
   end
 
   def top
