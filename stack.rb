@@ -4,6 +4,8 @@
 class Stack
   class EmptyStackException < StandardError; end
 
+  attr_reader :size
+
   def initialize
     @values = []
     @size = 0
@@ -28,10 +30,6 @@ class Stack
     ensure_not_empty
 
     @values[@size - 1]
-  end
-
-  def size
-    @size
   end
 
   private
