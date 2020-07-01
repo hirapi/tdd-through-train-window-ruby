@@ -2,7 +2,7 @@
 
 # Sample class representing stack
 class Stack
-  class EmptyStackException; end
+  class EmptyStackException < StandardError; end
 
   def initialize
     @size = 0
@@ -17,7 +17,9 @@ class Stack
     @size += 1
   end
 
-  def pop; end
+  def pop
+    raise EmptyStackException
+  end
 
   def top
     @value
