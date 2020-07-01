@@ -1,4 +1,8 @@
 # frozen_string_literal: true
 
 # Sample class representing stack
-class Stack; end
+class Stack
+  def empty?
+    false
+  end
+end
