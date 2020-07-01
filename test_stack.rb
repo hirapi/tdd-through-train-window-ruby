@@ -37,6 +37,6 @@ class TestStack < Minitest::Test
   def test_push_and_pop
     @stack.push(1)
     @stack.pop
-    assert_equal(1, @stack.size)
+    assert_equal(0, @stack.size)
   end
 end
