@@ -18,16 +18,22 @@ class Stack
   end
 
   def pop
-    raise EmptyStackException if empty?
+    ensure_not_empty
   end
 
   def top
-    raise EmptyStackException if empty?
+    ensure_not_empty
 
     @value
   end
 
   def size
     @size
+  end
+
+  private
+
+  def ensure_not_empty
+    raise EmptyStackException if empty?
   end
 end
