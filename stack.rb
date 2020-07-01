@@ -3,6 +3,6 @@
 # Sample class representing stack
 class Stack
   def empty?
-    false
+    true
   end
 end
