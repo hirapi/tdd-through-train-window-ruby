@@ -22,6 +22,8 @@ class Stack
   end
 
   def top
+    raise EmptyStackException if empty?
+
     @value
   end
 
