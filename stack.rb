@@ -19,6 +19,8 @@ class Stack
 
   def pop
     ensure_not_empty
+
+    @size -= 1
   end
 
   def top
